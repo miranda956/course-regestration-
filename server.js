@@ -7,7 +7,6 @@ const session=require('express-session');
 const path =require('path');
 const exphbs=require('express-handlebars');
 const passport =require("passport-local");
-const morgan =require("morgan");
 
 const db =require('./models');
 
