@@ -58,12 +58,11 @@ module.exports=(sequelize,DataTypes)=>{
     
     );
     Hod.associate=(models)=>{
-        Hod.hasMany(models.Course,{
-            foreignkey:{
-                allowNull:false
-            }
-        })
-       
+        Hod.associate=(models)=>{
+            Hod.belongsToMany(models.Course,{
+                through:"Enrollment"
+            })
+        }
     }
     return Hod;
 }   

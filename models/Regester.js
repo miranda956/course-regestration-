@@ -58,11 +58,10 @@ module.exports=(sequelize,DataTypes)=>{
     
     );
     Regester.associate=(models)=>{
-        Regester.hasMany(models.Course,{
-            foreignkey:{
-                allowNull:false
-            }
-        })
+            Regester.belongsToMany(models.Course,{
+                through:"Enrollment"
+            })
+        
         
     }
     return Regester;

@@ -28,12 +28,15 @@ module.exports=(sequelize,DataTypes)=>{
         freezeTableName:true,
         timestamps:false
     },
-
-    
-
-    
-    
     );
+
+    Course.associate=(models)=>{
+        Course.hasMany(models.Enrollment,{
+            foreignkey:{
+                allowNull:false
+            }   
+        })
+    }
     
     return Course;
 }   

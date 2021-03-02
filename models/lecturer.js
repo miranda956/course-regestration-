@@ -57,12 +57,11 @@ module.exports=(sequelize,DataTypes)=>{
     
     );
     Lecturer.associate=(models)=>{
-        Lecturer.hasMany(models.Course,{
-            foreignkey:{
-                allowNull:false
-            }
-        })
+            Lecturer.belongsToMany(models.Course,{
+                through:"Enrollment"
+            })
+        }
         
-    }
+    
     return Lecturer;
 }   
