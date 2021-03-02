@@ -67,3 +67,4 @@ module.exports=(sequelize,DataTypes)=>{
     }
     return Hod;
 }   
+

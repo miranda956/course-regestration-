@@ -39,6 +39,17 @@ function  router(app){
             console.log(err)
         })
     })
+
+    app.patch("",(req,res,next)=>{
+        db.Enrollment.update({
+            isApproved:req.body.isApproved
+        },{
+            where:{
+                id:req.params.id
+            }
+        })
+    })
+
     
         
     }
