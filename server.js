@@ -29,7 +29,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname,'views')));
 
 db.sequelize.sync({force:false}).then(()=>{
-    const port = process.env.PORT || 5000;
+    const port = process.env.PORT || 4500;
     app.listen(port,()=> 
      console.log(`Server running on port ${port} 🔥`)); 
  }).catch((err)=>{

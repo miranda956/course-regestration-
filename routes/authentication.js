@@ -25,7 +25,7 @@ app.post('/login', (req, res) => {
     const { email, password } = req.body;
     const hashedPassword = getHashedPassword(password);
 
-    const user = users.find(u => {
+    const user = user.find(u => {
         return u.email === email && hashedPassword === u.password
     });
 
@@ -86,3 +86,4 @@ app.get('/protected', requireAuth, (req, res) => {
 }
 
 module.exports=router;
+
