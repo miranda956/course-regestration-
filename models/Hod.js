@@ -59,8 +59,9 @@ module.exports=(sequelize,DataTypes)=>{
     );
     Hod.associate=(models)=>{
         Hod.associate=(models)=>{
-            Hod.belongsToMany(models.Course,{
-                through:"Enrollment"
+            Hod.hasMany(models.Enrollment,{
+                
+                
             })
         }
     }

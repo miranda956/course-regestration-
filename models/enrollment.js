@@ -1,6 +1,6 @@
 
 module.exports=(sequelize,DataTypes)=>{
-    const Enrollment=sequelize.define("Enrollement",{
+    const Enrollment=sequelize.define("Enrollment",{
         isApproved:{
             type:DataTypes.BOOLEAN,
             allowNull:false,
